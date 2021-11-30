@@ -1,9 +1,40 @@
 html {
   background-color: #D5D5D5;
+ 
 }
+
+.logo {
+  font-size: 2.5em;
+  font-family: monospace;
+  color: #D5D5D5;
+}
+
+#searchBar {
+  margin-left: 2em;
+}
+
+#query {
+  font: 1em system-ui;
+  color: #0A1612;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search button {
+  all: unset;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+}
+
+
 
 header {
   background-color: #0A1612;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 body {
