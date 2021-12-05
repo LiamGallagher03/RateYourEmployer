@@ -14,33 +14,38 @@ header {
   color: #FFFFFF;
   position: sticky;
   top: 0;
+  height: 4em;
 }
 
 .logo {
   font-size: 2.5em;
   font-family: monospace;
-  margin-left: 0.5em;
+  padding: 1em;
+}
+
+.navButtons {
+  position: absolute;
+  right: 0;
+}
+.navButtons ul {
+  list-style-type: none;
+  overflow: hidden;
 }
 
 .navButtons li {
   float: left;
 }
 
-.navButtons ul {
-  list-style-type: none;
-  overflow: hidden;
-  margin-left: 39em;
-}
-
 .navButtons a {
   text-align: center;
   display: block;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1em;
   color: #FFFFFF;
   font-family: monospace;
   font-size: 1.5em;
+  float: right;
+  
 }
 
 .navButtons a:hover {
