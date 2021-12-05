@@ -1,57 +1,39 @@
 html {
-  background-color: #D5D5D5;
-
-}
-header {
-  background-color: #0A1612;
-}
-
-header {
-  background-color: #0A1612;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #FFFFFF;
-  position: sticky;
-  top: 0;
-  height: 4em;
-}
-
-.logo {
-  font-size: 2.5em;
-  font-family: monospace;
-  padding: 1em;
-}
-
-.navButtons {
-  position: absolute;
-  right: 0;
-}
-.navButtons ul {
-  list-style-type: none;
-  overflow: hidden;
-}
-
-.navButtons li {
-  float: left;
-}
-
-.navButtons a {
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  padding: 1em;
-  color: #FFFFFF;
-  font-family: monospace;
-  font-size: 1.5em;
-  float: right;
+    background-color: #D5D5D5;
   
-}
+  }
+  header {
+    background-color: #0A1612;
+  }
+  
+  header {
+    background-color: #0A1612;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    height: 4em;
+  }
+  
+  .logo {
+    font-size: 4em;
+    font-family: monospace;
+    margin: auto;
+  }
+  
 
-.navButtons a:hover {
-  color: #6ec7ff;
-}
+  
+  body {
+   margin: 0;
+   padding: 0;
+  }
 
-body {
-  background-color: #000000;
-}
+  .search-bar {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+  }
+
