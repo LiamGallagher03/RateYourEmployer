@@ -1,25 +1,39 @@
-import './App.css';
+import Header from './components/Header'
+import Reviews from './components/Reviews'
+
+import { useState } from 'react'
 
 function App() {
+ const [reviews, setReviews] = useState([
+   {
+    id: 1,
+    establishment: "Freddy Fazbear's Pizza",
+    location: "Dallas, TX",
+    rating: true,
+    review: "Yummy"
+   },
+   {
+     id: 2,
+     establishment: "Majima Construction",
+     location: "Kamurocho, Japan",
+     rating: false,
+     review: "weird guy with eyepatch"
+   },
+   {
+     id: 3,
+     establishment: "boring company",
+     location: "testland",
+     rating: true,
+     review: "test"
+   }
+ ])
+
   return (
-    <html>
-      <header>
-        
-        <div class="logo">
-          Rate Your Employer
-        </div>
-        <div class="navButtons">
-          <ul>
-            <li><a href="#homePage">Home</a></li>
-            <li><a href="#search">Search</a></li>
-            <li><a href="#addLocation">Add Location</a></li>
-            <li><a href="#help">Help</a></li>
-          </ul>
-        </div>
-        </header>
-      <body>
-      </body>
-      </html>
+    <div className="App">
+   <Header />
+    <Reviews reviews={reviews}/>
+    </div>
+    
   );
 }
 

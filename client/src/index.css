@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  background-color: #D5D5D5;
+  font-family: monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  background-color: #0A1612;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  height: 2em;
+  text-align: center;
+  
+}
+
+.logo {
+  font-size: 2em;
+  
+
+}
+
+body {
+ margin: 0;
+ padding: 0;
+}
+
+table {
+ width: 75%;
+ background-color: rgb(106, 158, 255);
+ border-collapse: collapse;
+ table-layout: fixed;
+}
+
+table, th, td {
+  border: 3px solid rgb(0, 58, 134);
+  text-align: center;
+}
+
+th {
+  font-size: 2em;
+}
+
+td {
+  font-size: 1em;
+}
+
+.Establishment {
+  width: 15%;
+}
+
+.Location {
+  width: 15%;
+}
+
+.Rating {
+  width: 10%;
+}
+
+.Review {
+  width: 30%;
 }
