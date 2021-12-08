@@ -55,10 +55,14 @@ td {
   width: 15%;
 }
 
-.Rating {
+.Rating, .RatingEmoji {
   width: 10%;
 }
 
 .Review {
   width: 30%;
+}
+
+.RatingEmoji {
+  font-size: 2em;
 }

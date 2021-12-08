@@ -1,17 +1,20 @@
 function Review({ review }) {
-    return (
-        <div className='review'>
-              <table>
-               
-                <tr>
-                <th className="Establishment">{review.establishment}</th>
-                <th className="Location">{review.location}</th>
-                <th className="Rating">{review.rating}</th>
-                <th className="Review">{review.review}</th>
-                </tr>
-            </table>
-        </div>
-    )
+    var recommend;
+    review.rating ? recommend = "👍" : recommend = "👎"
+
+        return (
+            <div className='review'>
+                <table>
+
+                    <tr>
+                        <td className="Establishment">{review.establishment}</td>
+                        <td className="Location">{review.location}</td>
+                        <td className="RatingEmoji">{recommend}</td>
+                        <td className="Review">{review.review}</td>
+                    </tr>
+                </table>
+            </div>
+        )
 }
 
 export default Review

@@ -25,6 +25,13 @@ function App() {
      location: "testland",
      rating: true,
      review: "test"
+   },
+   {
+     id: 4,
+     establishment: "gfoamngojfagfajmgag",
+     location: "fagfagfagfagagfagfa",
+     rating: true,
+     review: "fdsagsagagfagfaga"
    }
  ])
 
