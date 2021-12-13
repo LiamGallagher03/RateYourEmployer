@@ -1,46 +1,44 @@
-import './App.css';
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+import Header from './components/Header'
+import Reviews from './components/Reviews'
+
+import { useState, useEffect } from 'react'
 
 function App() {
+  const fakeReviews = [
+    {
+      id: 1,
+      establishment: "tempate",
+      location: "template",
+      rating: true,
+      review: "bad"
+    },
+    {
+      id: 2,
+      establishment: "bad",
+      location: "bad",
+      rating: false,
+      review: "bad"
+    }
+  ]
+
+  const [reviews, setReviews] = useState(fakeReviews)
+
+  useEffect(() => {
+    fetch('/reviews')
+      .then(res => res.json())
+      .then(data => {
+        setReviews(data.reviews)
+        console.info(data)
+      })
+  }, [])
+
   return (
-    <html>
-      <header>
-        <div class="logo">
-          Rate Your Employer
-        </div>
-      </header>
-      <body>
-        <div class="search-bar">
-          <form id="form">
-          <input class="search-text"
-            type="search"
-            id="query"
-            name="q"
-            placeholder="Type to search"
-            aria-label="search through site content">
-          </input>
-          <button type="submit">Search</button>
-          </form>
-        </div>
-      </body>
-    </html>
-    
+    <div className="App">
+      <Header />
+      <Reviews reviews={reviews} />
+    </div>
+
   );
-  const f = document.getElementById('form');
-  const q = document.getElementById('query');
-  const google = 'https://www.google.com/search?q=site%3A+';
-  const site = 'localhost:3000';
-
-  function submitted(event) {
-    event.preventDefault();
-    const url = google + site + '+' + q.value;
-    const win = window.open(url, '_blank');
-    win.focus();
-  }
-
-  f.addEventListener('submit', submitted);
-
-   
 }
 
 export default App;
