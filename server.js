@@ -13,6 +13,14 @@ app.get('/reviews',(req, res) => {
     })
 })
 
+app.post("/updateReviews",(req, res) => {
+    const {reviewId} = req.body
+    const query = db.insert(reviewId)
+    res.json({
+        reviewId
+    })
+})
+
 app.listen(8080,() => {
     console.log("server started")
 })
